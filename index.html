@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STEFAN</title>
+<meta name="description" content="Cooling beyond Earth.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="STEFAN">
+<meta property="og:description" content="Cooling beyond Earth.">
+<meta property="og:url" content="https://guilloduro.github.io/stefan/">
+<meta property="og:image" content="https://guilloduro.github.io/stefan/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;400&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; background:#000; color:#fff; }
+  body { -webkit-font-smoothing:antialiased; overflow:hidden; }
+  .silver { background:linear-gradient(180deg, #f4f4f4 0%, #c9c9c9 45%, #8d8d8d 100%), linear-gradient(90deg, #9a9a9a, #e8e8e8 50%, #9a9a9a);
+    background-blend-mode:multiply; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .btn { font-family:"Geist", sans-serif; color:#fff; text-decoration:none; font-size:12px; letter-spacing:.24em; text-transform:uppercase; opacity:.85; transition:opacity .2s; }
+  .btn:hover { opacity:1; }
+  .desc { font-family:"Rajdhani", sans-serif; font-weight:500; letter-spacing:.42em; text-transform:uppercase; }
+  /* Name top left, Contact top right, the line large at the bottom. The rider lives in the link preview (og.jpg). */
+  .page { height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:28px clamp(16px, 4vw, 56px) clamp(28px, 6vh, 64px); }
+  .bar { display:flex; justify-content:space-between; align-items:center; }
+  .bar .btn { font-size:clamp(12px, 1vw, 15px); }
+  .lockup { display:flex; align-items:center; gap:clamp(14px, 1.6vw, 24px); }
+  .name { font-family:"Rajdhani", sans-serif; font-weight:600; font-size:clamp(26px, 2.4vw, 40px); line-height:1; letter-spacing:.36em; }
+  .big { font-family:"Rajdhani", sans-serif; font-weight:600; text-transform:uppercase; font-size:clamp(34px, 5.4vw, 92px); line-height:.95; letter-spacing:.01em; }
+  @media (max-width:600px) { .name { font-size:22px; letter-spacing:.3em; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bar">
+    <div class="lockup"><div class="name silver">STEFAN</div></div>
+    <a class="btn contact" target="_blank" rel="noopener">Contact</a>
+  </div>
+  <h1 class="big silver">Cooling<br>beyond Earth</h1>
+</div>
+<script>
+const MAIL = ['guillermoduroandolz', 'gmail.com'].join('@'), MAILTO = 'mailto:' + MAIL;
+document.querySelectorAll('.contact').forEach(a => a.href = matchMedia('(pointer: coarse)').matches
+  ? MAILTO : 'https://mail.google.com/mail/?extsrc=mailto&url=' + encodeURIComponent(MAILTO));
+</script>
+</body>
+</html>
